@@ -110,3 +110,149 @@
     content: attr(data-three);
   }
   
+
+
+/* flights log */
+
+.log-contianer{
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  border-color: red;
+  width: 400px;
+  margin-left: auto;
+}
+
+.card {
+  --white: hsl(270, 100%, 14%);
+  --black: hsl(240, 15%, 9%);
+  --paragraph: hsl(285, 100%, 16%);
+  --line: hsl(240, 9%, 17%);
+  --primary: hsl(189, 92%, 58%);
+  
+  position: relative;
+
+  max-height: 500px;
+  overflow-y: auto; /* Keep vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling completely */
+
+  /* Remove the background of the vertical scrollbar */
+  scrollbar-color: transparent transparent; /* Firefox */
+  scrollbar-width: thin; /* Firefox */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+    padding: 1rem;
+    width: 19rem;
+    background-color: hsla(240, 15%, 9%, 1);
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsl(250, 95%, 16%) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsl(268, 96%, 18%) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsl(273, 94%, 13%) 0px, transparent 85%);
+  
+    border-radius: 1rem;
+    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+  }
+  .card .line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--line);
+  
+    border: none;
+  }
+  .card .card_title__container .card_title {
+    font-size: 1.2rem;
+    color: rgb(186, 126, 250);
+    font-family: sans-serif;
+  }
+
+  .card::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+  }
+  
+  .card::-webkit-scrollbar-track {
+    background: transparent; /* Make track transparent */
+  }
+  
+  .card::-webkit-scrollbar-thumb {
+    background: transparent; /* Make the thumb transparent */
+  }
+  .card .card__border {
+    overflow: hidden;
+    pointer-events: none;
+  
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+  
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background-image: linear-gradient(
+      0deg,
+      hsl(0, 0%, 100%) -50%,
+      hsl(0, 0%, 40%) 100%
+    );
+  
+    border-radius: 1rem;
+  }
+  
+  .card .card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    position: relative;
+    left: -45px;
+  }
+  
+  .card .card__list .card__list_item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card .card__list .card__list_item .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 1.5rem;
+    height: 1.5rem;
+  
+    border-radius: 20%;
+  }
+  
+  .card .card__list .card__list_item .check .check_svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  
+    fill: var(--black);
+    
+  }
+  
+  .card .card__list .card__list_item .list_text {
+    font-size: 0.9rem;
+    font-family: system-ui;
+    color: rgb(111, 217, 239);
+  }
+
+
+
+
+
+  .list_text {
+    display: inline-block;
+  }
+  
+  .progress {
+    position: relative;
+    margin-left: auto;
+    left: 50px;
+  }
+  

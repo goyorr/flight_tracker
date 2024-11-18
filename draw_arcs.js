@@ -10,10 +10,12 @@ const airportCodes = {
   'London': 'EGLL'
 };
 
+let airportCode
+
 // Function to handle the radio button change
 function handleAirportSelection(event) {
   const selectedAirport = event.target.id;  // Get the ID of the selected radio button
-  const airportCode = airportCodes[selectedAirport];  // Get the airport code from the mapping
+   airportCode = airportCodes[selectedAirport];  // Get the airport code from the mapping
 
   console.log(`Selected airport: ${selectedAirport} (Code: ${airportCode})`);
 
@@ -42,12 +44,16 @@ function fetchAndUpdateData(airportCode) {
 
         // Map the new flight data
         cords = data.data.map(flight => ({
+          origin_name: flight.origin_name,
+          destination_name: flight.destination_name,
           origin: flight.origin,
+          destination: flight.destination,
           origin_lat: flight.origin_lat,
           origin_lon: flight.origin_lon,
           des_lat: flight.dest_lat,
           des_lon: flight.dest_lon,
-          progress_precent: flight.progress_precent
+          progress_precent: flight.progress_precent,
+          estimated_in: flight.estimated_in
         }));
 
         // Generate new arcs data
@@ -56,13 +62,15 @@ function fetchAndUpdateData(airportCode) {
           startLng: cord.origin_lon,
           endLat: cord.des_lat,
           endLng: cord.des_lon,
-          color: [
-            cord.origin === airportCode ? 'red' : 'blue',
-            cord.origin === airportCode ? 'red' : 'blue'
-          ]
+          color: 
+            cord.origin === airportCode ? 'orange' : 'green'
+            // cord.origin === airportCode ? 'red' : 'blue'
+          // ]
         }));
 
         console.log("New Arcs Data:", newArcsData);
+
+        updateFlightLog(cords);
 
         // Add new arcs to the existing arcs array
         existingArcs = updateArcs(existingArcs, newArcsData);
@@ -97,7 +105,6 @@ function updateArcs(existingArcs, newArcsData) {
       updatedArcs[existingArcIndex] = newArc;
     }
   });
-
   return updatedArcs;
 }
 
@@ -130,3 +137,39 @@ window.addEventListener('resize', () => {
     globe.width(window.innerWidth).height(window.innerHeight);  
   }
 });
+
+
+
+
+
+// Function to update the flight log dynamically
+function updateFlightLog(flightData) {
+  const flightLog = document.getElementById('flightLog');
+
+  console.log(flightData)
+  
+  // Clear existing log
+  flightLog.innerHTML = '';
+
+  // Populate log with new data
+  flightData.forEach(flight => {
+    // Determine the arrow SVG based on status
+    const arrowSVG = airportCode === flight.destination
+      ? `<svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24"><path d="M17 12v4a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h1.586L7.293 8.707a1 1 0 1 1 1.414-1.414L15 13.586V12a1 1 0 0 1 2 0z" style="fill:green" data-name="Down Right"/></svg>`
+      : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.707 16.707a1 1 0 0 1-1.414 0L9 10.414V12a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-1.586l6.293 6.293a1 1 0 0 1 0 1.414z" style="fill:#ff8e31" data-name="Up Left"/></svg>`;
+
+    // Create a list item for each flight
+    const listItem = `
+      <li class="card__list_item">
+        <span class="check">${arrowSVG}</span>
+        <span class="list_text">${flight.origin_name} to ${flight.destination_name}</span>
+        <span class="list_text progress">${flight.progress_precent}%</span>
+      </li>
+    `;
+
+    // Append to the log
+    flightLog.insertAdjacentHTML('beforeend', listItem);
+  });
+}
+
+// Call this function with your flight data to populate the log
