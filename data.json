@@ -1,0 +1,68 @@
+{
+    "airports": [
+        {
+            "code": "00A",
+            "airport_info_url": "/airports/00A"
+        },
+        {
+            "code": "00AA",
+            "airport_info_url": "/airports/00AA"
+        },
+        {
+            "code": "00AK",
+            "airport_info_url": "/airports/00AK"
+        },
+        {
+            "code": "00AL",
+            "airport_info_url": "/airports/00AL"
+        },
+        {
+            "code": "00AN",
+            "airport_info_url": "/airports/00AN"
+        },
+        {
+            "code": "00AR",
+            "airport_info_url": "/airports/00AR"
+        },
+        {
+            "code": "00AS",
+            "airport_info_url": "/airports/00AS"
+        },
+        {
+            "code": "00C",
+            "airport_info_url": "/airports/00C"
+        },
+        {
+            "code": "00CA",
+            "airport_info_url": "/airports/00CA"
+        },
+        {
+            "code": "00CL",
+            "airport_info_url": "/airports/00CL"
+        },
+        {
+            "code": "00CN",
+            "airport_info_url": "/airports/00CN"
+        },
+        {
+            "code": "00F",
+            "airport_info_url": "/airports/00F"
+        },
+        {
+            "code": "00FA",
+            "airport_info_url": "/airports/00FA"
+        },
+        {
+            "code": "00FL",
+            "airport_info_url": "/airports/00FL"
+        },
+        {
+            "code": "00GA",
+            "airport_info_url": "/airports/00GA"
+        }
+    ],
+    "links": {
+        "next": "/airports?cursor=8d84ef4e2ccc154"
+    },
+    "num_pages": 1
+}

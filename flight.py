@@ -15,7 +15,7 @@ def get_enroute_flights(json_data):
     for key in ["arrivals", "departures", "scheduled_arrivals", "scheduled_departures"]:
         for flight in json_data.get(key, []):
             if "En Route" in flight.get("status", ""):
-                print(flight)
+                # print(flight)
                 try:
                     enroute_flights.append({
                         "origin_name": flight["origin"]["city"],
@@ -40,7 +40,7 @@ def fetch_and_update():
     if request.method == 'OPTIONS':
         return '', 200
 
-    airport_code = request.json.get('airport_code', 'LFPO')
+    airport_code = request.json.get('airport_code', 'GAMD')
     endpoint = f'https://aeroapi.flightaware.com/aeroapi/airports/{airport_code}/flights'
     response = requests.get(endpoint, headers=headers)
     

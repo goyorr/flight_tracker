@@ -10,7 +10,7 @@ const airportCodes = {
   'London': 'EGLL'
 };
 
-let airportCode
+let airportCode;
 
 // Function to handle the radio button change
 function handleAirportSelection(event) {
@@ -24,7 +24,7 @@ function handleAirportSelection(event) {
 
 // Function to fetch and update data based on the selected airport code
 function fetchAndUpdateData(airportCode) {
-  console.log("Fetching new data...");
+  console.log(`Fetching new data... ${airportCode}`);
 
   // Send the airport code to the Flask backend
   fetch('http://127.0.0.1:5000/fetch_and_update', {
@@ -128,8 +128,7 @@ radioButtons.forEach(button => {
   button.addEventListener('change', handleAirportSelection);  // Trigger fetch when radio button is selected
 });
 
-// Fetch initial data on page load (optional)
-fetchAndUpdateData('GMAD'); // Default to Agadir (GMAD)
+fetchAndUpdateData('GMAD');
 
 // Resize globe on window resize
 window.addEventListener('resize', () => {
@@ -152,11 +151,13 @@ function updateFlightLog(flightData) {
   flightLog.innerHTML = '';
 
   // Populate log with new data
+  console.log(`code: ${airportCode}`)
+  console.log(`data: ${flightData[0].origin}`)
   flightData.forEach(flight => {
     // Determine the arrow SVG based on status
-    const arrowSVG = airportCode === flight.destination
-      ? `<svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24"><path d="M17 12v4a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h1.586L7.293 8.707a1 1 0 1 1 1.414-1.414L15 13.586V12a1 1 0 0 1 2 0z" style="fill:green" data-name="Down Right"/></svg>`
-      : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.707 16.707a1 1 0 0 1-1.414 0L9 10.414V12a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-1.586l6.293 6.293a1 1 0 0 1 0 1.414z" style="fill:#ff8e31" data-name="Up Left"/></svg>`;
+    const arrowSVG = airportCode === flight.origin
+    ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.707 16.707a1 1 0 0 1-1.414 0L9 10.414V12a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-1.586l6.293 6.293a1 1 0 0 1 0 1.414z" style="fill:#ff8e31" data-name="Up Left"/></svg>`
+       :`<svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24"><path d="M17 12v4a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h1.586L7.293 8.707a1 1 0 1 1 1.414-1.414L15 13.586V12a1 1 0 0 1 2 0z" style="fill:green" data-name="Down Right"/></svg>`
 
     // Create a list item for each flight
     const listItem = `

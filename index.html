@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Tracker</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="output.css">
     <style>
         body {
             margin: 0;
@@ -22,11 +22,13 @@
         }
     </style>
     <script src="//unpkg.com/globe.gl"></script>
+    <link href="https://cdn.jsdelivr.net/npm/hs-select@1.0.0/dist/hs-select.min.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="globeViz"></div>
 
-   <div class="airport-picker">
+   <!-- <div class="airport-picker">
   <div
     class="selected"
     data-default="Agadir"
@@ -63,7 +65,7 @@
       <label class="option" for="London" data-txt="London"></label>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -78,7 +80,7 @@
   </div>
 </div> -->
 
-<div class="log-contianer">
+<!-- <div class="log-contianer">
   <div class="card">
     <div class="card__border"></div>
     <div class="card_title__container">
@@ -86,16 +88,226 @@
     </div>
     <hr class="line" />
     <ul class="card__list" id="flightLog">
-      <!-- <li class="card__list_item">
-        <span class="check">
-          <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24"><path d="M17 12v4a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h1.586L7.293 8.707a1 1 0 1 1 1.414-1.414L15 13.586V12a1 1 0 0 1 2 0z" style="fill:green"  data-name="Down Right"/></svg>
-        </span>
-        <span class="list_text">Maintain a Positive Attitude</span>
-      </li> -->
+
     </ul>
   </div>
-</div>
+</div> -->
+<div class="wrapper">
+  <div class="boxes">
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+          <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+          <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+          <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+        <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+        <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+        <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+      <div class="box">
+        <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+        <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+        <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="relative gap-2 flex flex-row top-[135px] text-2xl font-bold left-[22px] w-[250px] text-gray-300">LIVE FLIGHTS
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+      <path d="M 8.03125 8.4570312 C 7.770375 8.4589063 7.5103125 8.5625312 7.3203125 8.7695312 C 3.3953125 13.041531 1 18.741 1 25 C 1 31.259 3.3953125 36.958469 7.3203125 41.230469 C 7.7003125 41.644469 8.3569063 41.643094 8.7539062 41.246094 L 10.882812 39.117188 C 11.265812 38.734187 11.263391 38.124656 10.900391 37.722656 C 7.8553906 34.352656 6 29.889 6 25 C 6 20.111 7.8553906 15.647344 10.900391 12.277344 C 11.263391 11.875344 11.265813 11.266812 10.882812 10.882812 L 8.7539062 8.7539062 C 8.5554063 8.5554063 8.292125 8.4551562 8.03125 8.4570312 z M 41.96875 8.4570312 C 41.707625 8.4554062 41.444594 8.5554062 41.246094 8.7539062 L 39.115234 10.884766 C 38.732234 11.267766 38.734656 11.875344 39.097656 12.277344 C 42.143656 15.646344 44 20.111 44 25 C 44 29.889 42.144609 34.352656 39.099609 37.722656 C 38.736609 38.124656 38.734188 38.733187 39.117188 39.117188 L 41.246094 41.246094 C 41.643094 41.643094 42.299687 41.643469 42.679688 41.230469 C 46.604687 36.958469 49 31.259 49 25 C 49 18.741 46.604687 13.041531 42.679688 8.7695312 C 42.489688 8.5625312 42.229875 8.4586563 41.96875 8.4570312 z M 35.625 14.837891 C 35.355125 14.824516 35.079594 14.920406 34.871094 15.128906 L 32.740234 17.259766 C 32.381234 17.618766 32.341969 18.196938 32.667969 18.585938 C 34.123969 20.323937 35 22.561 35 25 C 35 27.439 34.123969 29.675109 32.667969 31.412109 C 32.341969 31.801109 32.381234 32.379281 32.740234 32.738281 L 34.871094 34.871094 C 35.288094 35.288094 35.967516 35.250687 36.353516 34.804688 C 38.625516 32.175687 40 28.748 40 25 C 40 21.252 38.625516 17.824312 36.353516 15.195312 C 36.160516 14.972313 35.894875 14.851266 35.625 14.837891 z M 14.375 14.839844 C 14.105125 14.853219 13.839484 14.974266 13.646484 15.197266 C 11.374484 17.825266 10 21.252 10 25 C 10 28.748 11.374484 32.175688 13.646484 34.804688 C 14.032484 35.250687 14.711906 35.288094 15.128906 34.871094 L 17.259766 32.740234 C 17.618766 32.381234 17.658031 31.803062 17.332031 31.414062 C 15.876031 29.676062 15 27.439 15 25 C 15 22.561 15.876031 20.324891 17.332031 18.587891 C 17.658031 18.198891 17.618766 17.620719 17.259766 17.261719 L 15.128906 15.128906 C 14.920406 14.920406 14.644875 14.826469 14.375 14.839844 z M 25 19 C 21.686 19 19 21.686 19 25 C 19 28.314 21.686 31 25 31 C 28.314 31 31 28.314 31 25 C 31 21.686 28.314 19 25 19 z" fill="white"></path>
+      </svg>
+  </h2>
+  <h3 class="relative top-[142px] font-mono left-[22px] text-gray-500 bg-black w-[220px] h-[32px]">real time 00:00:00</h3>
+  <div id="search-container">
+    <div class="nebula"></div>
+    <div class="starfield"></div>
+    <div class="cosmic-dust"></div>
+    <div class="cosmic-dust"></div>
+    <div class="cosmic-dust"></div>
+  
+    <div class="stardust"></div>
+  
+    <div class="cosmic-ring"></div>
+  
+    <div id="main">
+      <input
+        class="input"
+        name="text"
+        type="text"
+        placeholder="Choose an airport..."
+      />
+      <div id="input-mask"></div>
+      <div id="cosmic-glow"></div>
+      <div class="wormhole-border"></div>
+      <div id="wormhole-icon">
+        <svg
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="2"
+          stroke="#a9c7ff"
+          fill="none"
+          height="24"
+          width="24"
+          viewBox="0 0 24 24"
+        >
+          <circle r="10" cy="12" cx="12"></circle>
+          <path
+            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+          ></path>
+          <path d="M2 12h20"></path>
+        </svg>
+      </div>
+      <div id="search-icon">
+        <svg
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          stroke-width="2"
+          stroke="url(#cosmic-search)"
+          fill="none"
+          height="24"
+          width="24"
+          viewBox="0 0 24 24"
+        >
+          <circle r="8" cy="11" cx="11"></circle>
+          <line y2="16.65" x2="16.65" y1="21" x1="21"></line>
+          <defs>
+            <linearGradient gradientTransform="rotate(45)" id="cosmic-search">
+              <stop stop-color="#a9c7ff" offset="0%"></stop>
+              <stop stop-color="#6e8cff" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+<!-- 
+  <div class="absolute border-none top-[20px] max-w-sm" data-combo-box="">
+    <div class="relative">
+      <input class="input" type="text" value="India" role="combobox" aria-expanded="false" data-combo-box-input="" aria-label="Default combobox" />
+      <span class="icon-[tabler--caret-up-down] text-base-content/90 absolute end-3 top-1/2 size-4 flex-shrink-0 -translate-y-1/2" data-combo-box-toggle="" ></span>
+    </div>
+    <div class="bg-base-100 vertical-scrollbar rounded-scrollbar rounded-box relative z-50 max-h-44 w-full space-y-0.5 p-2 shadow-lg" style="display: none" data-combo-box-output="" >
+      <div class="dropdown-item combo-box-selected:active" tabindex="0" data-combo-box-output-item="">
+        <div class="flex items-center justify-between">
+          <span data-combo-box-search-text="Venezuela" data-combo-box-value="">Venezuela</span>
+          <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 flex-shrink-0"></span>
+        </div>
+      </div>
+      <div class="dropdown-item combo-box-selected:active" tabindex="1" data-combo-box-output-item="">
+        <div class="flex items-center justify-between">
+          <span data-combo-box-search-text="Papua New Guinea" data-combo-box-value="">Papua New Guinea</span>
+          <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 flex-shrink-0"></span>
+        </div>
+      </div>
+      <div class="dropdown-item combo-box-selected:active" tabindex="2" data-combo-box-output-item="">
+        <div class="flex items-center justify-between">
+          <span data-combo-box-search-text="South Africa " data-combo-box-value="">South Africa</span>
+          <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 flex-shrink-0"></span>
+        </div>
+      </div>
+      <div class="dropdown-item combo-box-selected:active" tabindex="3" data-combo-box-output-item="">
+        <div class="flex items-center justify-between">
+          <span data-combo-box-search-text="Honduras" data-combo-box-value="">Honduras</span>
+          <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 flex-shrink-0"></span>
+        </div>
+      </div>
+      <div class="dropdown-item combo-box-selected:active" tabindex="4" data-combo-box-output-item="">
+        <div class="flex items-center justify-between">
+          <span data-combo-box-search-text="India" data-combo-box-value="">India</span>
+          <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 flex-shrink-0"></span>
+        </div>
+      </div>
+      <div class="dropdown-item combo-box-selected:active" tabindex="5" data-combo-box-output-item="">
+        <div class="flex items-center justify-between">
+          <span data-combo-box-search-text="El Salvador" data-combo-box-value="">El Salvador</span>
+          <span class="icon-[tabler--check] text-primary combo-box-selected:block hidden size-4 flex-shrink-0"></span>
+        </div>
+      </div>
+     </div>
+  </div> -->
 
 <script src="draw_arcs.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hs-select@latest/dist/hs-select.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+<script>
+var colors = ["#000012", "#000012", "#000012", "#000012"]; // Color array for the boxes
+
+// Initially colorize each box and position in a vertical stack
+// Initially colorize each box and position in a vertical stack
+gsap.set(".box", {
+    y: (i) => i * 110 // Position boxes vertically with a gap of 110px
+});
+
+// Animate the boxes vertically with continuous loop
+gsap.to(".box", {
+    duration: 12,
+    ease: "none",
+    y: "-=1100", // Move each box up
+    modifiers: {
+        y: gsap.utils.unitize(y => (1100 + parseFloat(y)) % 1100) // Ensure values stay in the range 0 to 1100
+    },
+    repeat: -1 // Repeat infinitely
+});
+
+// Toggle overflow behavior
+const overflow = document.querySelector("#overflow");
+overflow.addEventListener("change", applyOverflow);
+
+function applyOverflow() {
+    if (overflow.checked) {
+        gsap.set(".wrapper", { overflow: "visible" });
+    } else {
+        gsap.set(".wrapper", { overflow: "hidden" });
+    }
+}
+
+</script>
+<script src="./node_modules/flyonui/flyonui.js"></script>
+<script src="node_modules/flyonui/dist/js/combobox.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
