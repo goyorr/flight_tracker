@@ -1,4 +1,3 @@
-/* src/styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,121 +5,6 @@
 *::-webkit-scrollbar {
   display: none;
 }
-/* .airport-picker{
-    background-color: red;
-    position: relative;
-    display: flex;
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: 0;
-} */
-
-/* drop down */
-/* .airport-picker {
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    transition: 300ms;
-    color: white;
-    overflow: hidden;
-    top: 134px;
-    left: 144px;
-    font-family: "Gill Sans", sans-serif;
-  }
-  
-  .selected {
-    background-color: #2a2f3b;
-    padding: 5px;
-    margin-bottom: 3px;
-    border-radius: 5px;
-    position: relative;
-    z-index: 100000;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .arrow {
-    position: relative;
-    right: 0px;
-    height: 10px;
-    transform: rotate(-90deg);
-    width: 25px;
-    fill: white;
-    z-index: 100000;
-    transition: 300ms;
-  }
-  
-  .options {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #2a2f3b;
-    position: relative;
-    top: -100px;
-    opacity: 0;
-    transition: 300ms;
-  }
-  
-  .airport-picker:hover > .options {
-    opacity: 1;
-    top: 0;
-  }
-  
-  .airport-picker:hover > .selected .arrow {
-    transform: rotate(0deg);
-  }
-  
-  .option {
-    border-radius: 5px;
-    padding: 5px;
-    transition: 300ms;
-    background-color: #2a2f3b;
-    width: 150px;
-    font-size: 15px;
-  }
-  .option:hover {
-    background-color: #323741;
-  }
-  
-  .options input[type="radio"] {
-    display: none;
-  }
-  
-  .options label {
-    display: inline-block;
-  }
-  .options label::before {
-    content: attr(data-txt);
-  }
-  
-  .options input[type="radio"]:checked + label {
-    display: none;
-  }
-  
-  .options input[type="radio"]#all:checked + label {
-    display: none;
-  }
-  
-  .airport-picker:has(.options input[type="radio"]#Agadir:checked) .selected::before {
-    content: attr(data-default);
-  }
-  .airport-picker:has(.options input[type="radio"]#Paris:checked) .selected::before {
-    content: attr(data-one);
-  }
-  .airport-picker:has(.options input[type="radio"]#NewYork:checked) .selected::before {
-    content: attr(data-two);
-  }
-  .airport-picker:has(.options input[type="radio"]#London:checked) .selected::before {
-    content: attr(data-three);
-  }
-   */
-
-
-/* flights log */
 
 .log-contianer{
   position: relative;
@@ -137,153 +21,139 @@
   --paragraph: hsl(285, 100%, 16%);
   --line: hsl(240, 9%, 17%);
   --primary: hsl(189, 92%, 58%);
-  
   position: relative;
-
   max-height: 500px;
-  overflow-y: auto; /* Keep vertical scrolling */
-  overflow-x: hidden; /* Disable horizontal scrolling completely */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 19rem;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+    at 88% 40%,
+    hsla(240, 15%, 9%, 1) 0px,
+    transparent 85%
+  ),
+  radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+  radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+  radial-gradient(at 0% 64%, hsl(250, 95%, 16%) 0px, transparent 85%),
+  radial-gradient(at 41% 94%, hsl(268, 96%, 18%) 0px, transparent 85%),
+  radial-gradient(at 100% 99%, hsl(273, 94%, 13%) 0px, transparent 85%);
+  border-radius: 1rem;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+}
 
-  /* Remove the background of the vertical scrollbar */
-  scrollbar-color: transparent transparent; /* Firefox */
-  scrollbar-width: thin; /* Firefox */
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  
-    padding: 1rem;
-    width: 19rem;
-    background-color: hsla(240, 15%, 9%, 1);
-    background-image: radial-gradient(
-        at 88% 40%,
-        hsla(240, 15%, 9%, 1) 0px,
-        transparent 85%
-      ),
-      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-      radial-gradient(at 0% 64%, hsl(250, 95%, 16%) 0px, transparent 85%),
-      radial-gradient(at 41% 94%, hsl(268, 96%, 18%) 0px, transparent 85%),
-      radial-gradient(at 100% 99%, hsl(273, 94%, 13%) 0px, transparent 85%);
-  
-    border-radius: 1rem;
-    box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
-  }
-  .card .line {
-    width: 100%;
-    height: 0.1rem;
-    background-color: var(--line);
-  
-    border: none;
-  }
-  .card .card_title__container .card_title {
-    font-size: 1.2rem;
-    color: rgb(186, 126, 250);
-    font-family: sans-serif;
-  }
+.card .line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--line);
+  border: none;
+}
 
-  .card::-webkit-scrollbar {
-    width: 8px; /* Adjust the width of the scrollbar */
-  }
-  
-  .card::-webkit-scrollbar-track {
-    background: transparent; /* Make track transparent */
-  }
-  
-  .card::-webkit-scrollbar-thumb {
-    background: transparent; /* Make the thumb transparent */
-  }
-  .card .card__border {
-    overflow: hidden;
-    pointer-events: none;
-  
-    position: absolute;
-    z-index: -10;
-    top: 50%;
-    left: 50%;
-  
-    width: calc(100% + 2px);
-    height: calc(100% + 2px);
-    background-image: linear-gradient(
-      0deg,
-      hsl(0, 0%, 100%) -50%,
-      hsl(0, 0%, 40%) 100%
-    );
-  
-    border-radius: 1rem;
-  }
-  
-  .card .card__list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    position: relative;
-    left: -45px;
-  }
-  
-  .card .card__list .card__list_item {
-    display: flex;
-    align-items: center;
-  }
-  
-  .card .card__list .card__list_item .check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    width: 1.5rem;
-    height: 1.5rem;
-  
-    border-radius: 20%;
-  }
-  
-  .card .card__list .card__list_item .check .check_svg {
-    width: 1.75rem;
-    height: 1.75rem;
-  
-    fill: var(--black);
-    
-  }
-  
-  .card .card__list .card__list_item .list_text {
-    font-size: 0.9rem;
-    font-family: system-ui;
-    color: rgb(111, 217, 239);
-  }
+.card .card_title__container .card_title {
+  font-size: 1.2rem;
+  color: rgb(186, 126, 250);
+  font-family: sans-serif;
+}
 
+.card::-webkit-scrollbar {
+  width: 8px;
+}
 
+.card::-webkit-scrollbar-track {
+  background: transparent;
+}
 
+.card::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 
+.card .card__border {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(
+    0deg,
+    hsl(0, 0%, 100%) -50%,
+    hsl(0, 0%, 40%) 100%
+  );
+  border-radius: 1rem;
+}
 
-  .list_text {
-    display: inline-block;
-  }
+.card .card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+  left: -45px;
+}
+
+.card .card__list .card__list_item {
+  display: flex;
+  align-items: center;
+}
+
+.card .card__list .card__list_item .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 20%;
+}
+
+.card .card__list .card__list_item .check .check_svg {
+  width: 1.75rem;
+  height: 1.75rem;
+
+  fill: var(--black);
   
-  .progress {
-    position: relative;
-    margin-left: auto;
-    left: 50px;
-  }
+}
 
-/* Wrapper container styling */
+.card .card__list .card__list_item .list_text {
+  font-size: 0.9rem;
+  font-family: system-ui;
+  color: rgb(111, 217, 239);
+}
+
+.list_text {
+  display: inline-block;
+}
+
+.progress {
+  position: relative;
+  margin-left: auto;
+  left: 50px;
+}
+
 .wrapper {
-  width: 350px; /* Box width */
-  height: 100%; /* Adjust the height based on the number of boxes */
+  width: 350px;
+  height: 100%;
   position: absolute;
   top: 190px;
   overflow: hidden;
 }
 
-/* Border around the wrapper */
 .wrapper::after {
   width: 850px;
   height: 550px;
   position: absolute;
 }
 
-/* Styling for each box */
 .box {
-  width: 100%; /* Width of each box */
-  height: 120px; /* Height of each box (adjusted to fit content) */
+  width: 100%;
+  height: 120px;
   position: absolute;
   font-family: "Gill Sans", sans-serif;
   font-size: 20px;
@@ -292,7 +162,6 @@
   color: rgb(8, 136, 255);
 }
 
-/* Styling for flight info text */
 .flight-info {
   position: relative;
   left: 25px;
@@ -301,11 +170,9 @@
 .flight-info1,
 .flight-info2 {
   font-size: 13px;
-  /* color: rgb(179, 177, 177); */
   left: 25px;
 }
 
-/* Flight info positioning */
 .flight-info1 {
   position: relative;
   bottom: 18px;
@@ -316,26 +183,10 @@
   bottom: 40px;
 }
 
-/* Wrapper positioning for boxes */
 .boxes {
   position: relative;
   top: -50px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes twinkle {
   0%,
@@ -375,10 +226,10 @@
 
 #search-container {
   display: flex;
-  position: fixed; /* Keeps it fixed at the top of the screen */
-  top: 20px; /* Space from the top of the screen */
-  left: 50%; /* Position it horizontally at the center */
-  transform: translateX(-50%); /* Center the container horizontally */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 400px;
 }
 
@@ -399,7 +250,6 @@
   width: 100px;
   height: 20px;
   position: absolute;
-  /* background: linear-gradient(90deg, transparent, #05071b); */
   top: 18px;
   left: 70px;
 }
@@ -646,27 +496,20 @@
   }
 }
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   text-indent: 1px;
   text-overflow: '';
 }
 
-
-
-
 .glass-navbar {
   background: radial-gradient(45.29% 45.44% at 54.71% 55.37%, rgba(222, 222, 222, 0.14) 0%, rgba(120, 120, 120, 0.14) 100%);
   backdrop-filter: blur(5.4px);
-  position: sticky; /* Makes the navbar stick to the top */
-
-  top: 25px;           /* Positions it at the top */
-  z-index: 10;      /* Ensures it stays above other content */
+  position: sticky;
+  top: 25px;
+  z-index: 10;
 }
 
-/* Scroll state styles */
 .scrolling-navbar {
-    background-color: rgba(255, 255, 255, 0.8); /* Less transparent when scrolling */
-    backdrop-filter: blur(5px); /* Slight blur effect */
-    border-color: rgba(255, 255, 255, 0.5); /* Slightly brighter border */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-color: rgba(255, 255, 255, 0.5);
 }
