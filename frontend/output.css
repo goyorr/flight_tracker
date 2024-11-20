@@ -729,9 +729,9 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-neutral-300 {
+.border-neutral-700 {
   --tw-border-opacity: 1;
-  border-color: rgb(212 212 212 / var(--tw-border-opacity, 1));
+  border-color: rgb(64 64 64 / var(--tw-border-opacity, 1));
 }
 
 .bg-black {
@@ -742,6 +742,15 @@ video {
 .bg-neutral-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+}
+
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1));
+}
+
+.bg-neutral-900\/50 {
+  background-color: rgb(23 23 23 / 0.5);
 }
 
 .px-4 {
@@ -812,22 +821,18 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
-.text-neutral-600 {
+.text-neutral-300 {
   --tw-text-opacity: 1;
-  color: rgb(82 82 82 / var(--tw-text-opacity, 1));
+  color: rgb(212 212 212 / var(--tw-text-opacity, 1));
 }
 
-.text-neutral-600\/50 {
-  color: rgb(82 82 82 / 0.5);
+.text-neutral-300\/50 {
+  color: rgb(212 212 212 / 0.5);
 }
 
 .text-violet-700 {
   --tw-text-opacity: 1;
   color: rgb(109 40 217 / var(--tw-text-opacity, 1));
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
@@ -1355,13 +1360,13 @@ select {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.hover\:bg-neutral-900\/5:hover {
-  background-color: rgb(23 23 23 / 0.05);
+.hover\:bg-neutral-50\/5:hover {
+  background-color: rgb(250 250 250 / 0.05);
 }
 
-.hover\:text-neutral-900:hover {
+.hover\:text-white:hover {
   --tw-text-opacity: 1;
-  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:opacity-75:hover {
@@ -1373,18 +1378,18 @@ select {
   outline-offset: 2px;
 }
 
-.focus-visible\:border-black:focus-visible {
+.focus-visible\:border-white:focus-visible {
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.focus-visible\:bg-neutral-900\/5:focus-visible {
-  background-color: rgb(23 23 23 / 0.05);
+.focus-visible\:bg-neutral-50\/10:focus-visible {
+  background-color: rgb(250 250 250 / 0.1);
 }
 
-.focus-visible\:text-neutral-900:focus-visible {
+.focus-visible\:text-white:focus-visible {
   --tw-text-opacity: 1;
-  color: rgb(23 23 23 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .focus-visible\:outline-none:focus-visible {
@@ -1404,8 +1409,8 @@ select {
   outline-offset: 2px;
 }
 
-.focus-visible\:outline-black:focus-visible {
-  outline-color: #000;
+.focus-visible\:outline-white:focus-visible {
+  outline-color: #fff;
 }
 
 .disabled\:cursor-not-allowed:disabled {
@@ -1414,56 +1419,4 @@ select {
 
 .disabled\:opacity-75:disabled {
   opacity: 0.75;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:border-neutral-700 {
-    --tw-border-opacity: 1;
-    border-color: rgb(64 64 64 / var(--tw-border-opacity, 1));
-  }
-
-  .dark\:bg-neutral-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1));
-  }
-
-  .dark\:bg-neutral-900\/50 {
-    background-color: rgb(23 23 23 / 0.5);
-  }
-
-  .dark\:text-neutral-300 {
-    --tw-text-opacity: 1;
-    color: rgb(212 212 212 / var(--tw-text-opacity, 1));
-  }
-
-  .dark\:text-neutral-300\/50 {
-    color: rgb(212 212 212 / 0.5);
-  }
-
-  .dark\:hover\:bg-neutral-50\/5:hover {
-    background-color: rgb(250 250 250 / 0.05);
-  }
-
-  .dark\:hover\:text-white:hover {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-  }
-
-  .dark\:focus-visible\:border-white:focus-visible {
-    --tw-border-opacity: 1;
-    border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-  }
-
-  .dark\:focus-visible\:bg-neutral-50\/10:focus-visible {
-    background-color: rgb(250 250 250 / 0.1);
-  }
-
-  .dark\:focus-visible\:text-white:focus-visible {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-  }
-
-  .dark\:focus-visible\:outline-white:focus-visible {
-    outline-color: #fff;
-  }
 }
