@@ -2,47 +2,20 @@ let cords = [];
 let globe; 
 let existingArcs = [];
 
-// Airport codes mapping
-const airportCodes = {
-  'Agadir': 'GMAD',
-  'Paris': 'LFPG',
-  'NewYork': 'KJFK',
-  'London': 'EGLL'
-};
-
-let airportCode;
-
-// Function to handle the radio button change
-function handleAirportSelection(event) {
-  const selectedAirport = event.target.id;  // Get the ID of the selected radio button
-   airportCode = airportCodes[selectedAirport];  // Get the airport code from the mapping
-
-  console.log(`Selected airport: ${selectedAirport} (Code: ${airportCode})`);
-
-  fetchAndUpdateData(airportCode);
-}
-
-// Function to fetch and update data based on the selected airport code
 function fetchAndUpdateData(airportCode) {
-  console.log(`Fetching new data... ${airportCode}`);
 
-  // Send the airport code to the Flask backend
   fetch('http://127.0.0.1:5000/fetch_and_update', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ airport_code: airportCode }) // Pass the airport code to Flask
+    body: JSON.stringify({ airport_code: airportCode })
   })
     .then(response => response.json())
     .then(data => {
       if (data.status === "success") {
-        console.log("Data fetched successfully:", data.data);
-
-        // Clear old arcs
         existingArcs = [];
 
-        // Map the new flight data
         cords = data.data.map(flight => ({
           origin_name: flight.origin_name,
           destination_name: flight.destination_name,
@@ -56,7 +29,6 @@ function fetchAndUpdateData(airportCode) {
           estimated_in: flight.estimated_in
         }));
 
-        // Generate new arcs data
         const newArcsData = cords.map(cord => ({
           startLat: cord.origin_lat,
           startLng: cord.origin_lon,
@@ -64,18 +36,10 @@ function fetchAndUpdateData(airportCode) {
           endLng: cord.des_lon,
           color: 
             cord.origin === airportCode ? 'orange' : 'green'
-            // cord.origin === airportCode ? 'red' : 'blue'
-          // ]
         }));
 
-        console.log("New Arcs Data:", newArcsData);
-
-        updateFlightLog(cords);
-
-        // Add new arcs to the existing arcs array
         existingArcs = updateArcs(existingArcs, newArcsData);
 
-        // Update the globe with the new arcs
         if (globe) {
           globe.arcsData(existingArcs);
         }
@@ -86,8 +50,6 @@ function fetchAndUpdateData(airportCode) {
     .catch(error => console.error('Error:', error));
 }
 
-
-// Function to update arcs data
 function updateArcs(existingArcs, newArcsData) {
   const updatedArcs = [...existingArcs];
 
@@ -108,7 +70,6 @@ function updateArcs(existingArcs, newArcsData) {
   return updatedArcs;
 }
 
-// Initialize globe (your existing globe setup code)
 function initializeGlobe() {
   globe = Globe()
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
@@ -122,55 +83,53 @@ function initializeGlobe() {
 
 initializeGlobe();
 
-// Attach event listeners to radio buttons
-const radioButtons = document.querySelectorAll('input[name="option"]');
-radioButtons.forEach(button => {
-  button.addEventListener('change', handleAirportSelection);  // Trigger fetch when radio button is selected
-});
-
 fetchAndUpdateData('GMAD');
 
-// Resize globe on window resize
 window.addEventListener('resize', () => {
   if (globe) {
     globe.width(window.innerWidth).height(window.innerHeight);  
   }
 });
 
+document.addEventListener('alpine:init', () => {
+  Alpine.data('combobox', () => ({
+      allOptions: [],
+      options: [],
+      isOpen: false,
+      openedWithKeyboard: false,
+      selectedOption: null,
+      query: '',
+      page: 1,
+      perPage: 20,
+      async init() {
+          this.fetchData();
+      },
 
+      async fetchData() {
+          const response = await fetch(`http://127.0.0.1:5000/api/search_airports?query=${this.query}&page=${this.page}&per_page=${this.perPage}`);
+          const data = await response.json();
+          this.options = data;
+        },
 
+        setSelectedOption(option) {
+          this.selectedOption = option;
+          this.isOpen = false;
+          this.openedWithKeyboard = false;
+          this.$refs.hiddenTextField.value = option;
+          fetchAndUpdateData(option.icao);
+      },
+      
 
+      getFilteredOptions(query) {
+          this.query = query;
+          this.page = 1;
+          this.fetchData();
+      },
 
-// Function to update the flight log dynamically
-function updateFlightLog(flightData) {
-  const flightLog = document.getElementById('flightLog');
-
-  console.log(flightData)
-  
-  // Clear existing log
-  flightLog.innerHTML = '';
-
-  // Populate log with new data
-  console.log(`code: ${airportCode}`)
-  console.log(`data: ${flightData[0].origin}`)
-  flightData.forEach(flight => {
-    // Determine the arrow SVG based on status
-    const arrowSVG = airportCode === flight.origin
-    ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.707 16.707a1 1 0 0 1-1.414 0L9 10.414V12a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-1.586l6.293 6.293a1 1 0 0 1 0 1.414z" style="fill:#ff8e31" data-name="Up Left"/></svg>`
-       :`<svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 24 24"><path d="M17 12v4a1 1 0 0 1-1 1h-4a1 1 0 0 1 0-2h1.586L7.293 8.707a1 1 0 1 1 1.414-1.414L15 13.586V12a1 1 0 0 1 2 0z" style="fill:green" data-name="Down Right"/></svg>`
-
-    // Create a list item for each flight
-    const listItem = `
-      <li class="card__list_item">
-        <span class="check">${arrowSVG}</span>
-        <span class="list_text">${flight.origin_name} to ${flight.destination_name}</span>
-        <span class="list_text progress">${flight.progress_precent}%</span>
-      </li>
-    `;
-
-    // Append to the log
-    flightLog.insertAdjacentHTML('beforeend', listItem);
-  });
-}
-
-// Call this function with your flight data to populate the log
+      handleKeydownOnOptions(event) {
+          if ((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 48 && event.keyCode <= 57) || event.keyCode === 8) {
+              this.$refs.searchField.focus();
+          }
+      },
+  }))
+})

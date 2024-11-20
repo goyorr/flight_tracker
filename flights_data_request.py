@@ -2,12 +2,17 @@ from flask import Flask, request, jsonify
 import requests
 import airportsdata
 from flask_cors import CORS
+import json
 
 app = Flask(__name__)
 CORS(app)
 
-api_key = 'gWKvad4goOUHnLERuC98ZBZ3fQ31G4ZU'
+api_key = ''
 headers = {'x-apikey': api_key}
+
+with open('airport_city_icao.json', 'r') as file:
+    airport_data = json.load(file)
+
 
 def get_enroute_flights(json_data):
     enroute_flights = []
@@ -15,7 +20,6 @@ def get_enroute_flights(json_data):
     for key in ["arrivals", "departures", "scheduled_arrivals", "scheduled_departures"]:
         for flight in json_data.get(key, []):
             if "En Route" in flight.get("status", ""):
-                # print(flight)
                 try:
                     enroute_flights.append({
                         "origin_name": flight["origin"]["city"],
@@ -51,6 +55,22 @@ def fetch_and_update():
         return jsonify({"status": "success", "message": "Data fetched successfully!", "data": enroute_flights})
     else:
         return jsonify({"status": "error", "message": response.text}), response.status_code
+
+@app.route('/api/search_airports', methods=['GET'])
+def search_airports():
+    query = request.args.get('query', '').lower()
+    page = int(request.args.get('page', 1))
+    per_page = int(request.args.get('per_page', 10))
+
+    filtered_data = [
+        item for item in airport_data if query in item['airport_name'].lower()
+    ]
+
+    start = (page - 1) * per_page
+    end = start + per_page
+    paginated_data = filtered_data[start:end]
+
+    return jsonify(paginated_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -3,8 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+*::-webkit-scrollbar {
+  display: none;
+}
 /* .airport-picker{
     background-color: red;
     position: relative;
@@ -16,7 +17,7 @@
 } */
 
 /* drop down */
-.airport-picker {
+/* .airport-picker {
     width: fit-content;
     cursor: pointer;
     position: relative;
@@ -116,7 +117,7 @@
   .airport-picker:has(.options input[type="radio"]#London:checked) .selected::before {
     content: attr(data-three);
   }
-  
+   */
 
 
 /* flights log */
@@ -643,4 +644,29 @@
   100% {
     transform: translate(-50%, -50%) rotate(450deg);
   }
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+
+
+
+.glass-navbar {
+  background: radial-gradient(45.29% 45.44% at 54.71% 55.37%, rgba(222, 222, 222, 0.14) 0%, rgba(120, 120, 120, 0.14) 100%);
+  backdrop-filter: blur(5.4px);
+  position: sticky; /* Makes the navbar stick to the top */
+
+  top: 25px;           /* Positions it at the top */
+  z-index: 10;      /* Ensures it stays above other content */
+}
+
+/* Scroll state styles */
+.scrolling-navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Less transparent when scrolling */
+    backdrop-filter: blur(5px); /* Slight blur effect */
+    border-color: rgba(255, 255, 255, 0.5); /* Slightly brighter border */
 }
