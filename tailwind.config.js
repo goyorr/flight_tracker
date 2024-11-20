@@ -6,8 +6,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [
-    // require("flyonui"),
-    // require("flyonui/plugin") 
-  ]
+  plugins: []
 }

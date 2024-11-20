@@ -11,10 +11,10 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-api_key = os.getenv('gWKvad4goOUHnLERuC98ZBZ3fQ31G4ZU')
+api_key = os.getenv('flight_aware_api_key')
 headers = {'x-apikey': api_key}
 
-with open('airport_city_icao.json', 'r') as file:
+with open('../data/airport_city_icao.json', 'r') as file:
     airport_data = json.load(file)
 
 def get_enroute_flights(json_data):
