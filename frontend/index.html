@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlightTracker</title>
+    <link rel="stylesheet" type="text/css" href="output.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000012;
+        }
+        #globeViz {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000012;
+        }
+    </style>
+    <script src="//unpkg.com/globe.gl"></script>
+    <link href="https://cdn.jsdelivr.net/npm/hs-select@1.0.0/dist/hs-select.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div id="globeViz"></div>
+    <div class="wrapper">
+      <div class="boxes">
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+              <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+              <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+              <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+            <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+            <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+            <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+          <div class="box">
+            <div class="flight-info font-mono">NewYork <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">Paris</span></div> 
+            <div class="flight-info1 text-gray-500 font-mono">out time    : 01:13pm</div>
+            <div class="flight-info2 text-gray-500 font-mono">estimated in: 01:13pm</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="relative gap-2 flex flex-row top-[135px] text-2xl font-bold left-[22px] w-[250px] text-gray-300">LIVE FLIGHTS
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+          <path d="M 8.03125 8.4570312 C 7.770375 8.4589063 7.5103125 8.5625312 7.3203125 8.7695312 C 3.3953125 13.041531 1 18.741 1 25 C 1 31.259 3.3953125 36.958469 7.3203125 41.230469 C 7.7003125 41.644469 8.3569063 41.643094 8.7539062 41.246094 L 10.882812 39.117188 C 11.265812 38.734187 11.263391 38.124656 10.900391 37.722656 C 7.8553906 34.352656 6 29.889 6 25 C 6 20.111 7.8553906 15.647344 10.900391 12.277344 C 11.263391 11.875344 11.265813 11.266812 10.882812 10.882812 L 8.7539062 8.7539062 C 8.5554063 8.5554063 8.292125 8.4551562 8.03125 8.4570312 z M 41.96875 8.4570312 C 41.707625 8.4554062 41.444594 8.5554062 41.246094 8.7539062 L 39.115234 10.884766 C 38.732234 11.267766 38.734656 11.875344 39.097656 12.277344 C 42.143656 15.646344 44 20.111 44 25 C 44 29.889 42.144609 34.352656 39.099609 37.722656 C 38.736609 38.124656 38.734188 38.733187 39.117188 39.117188 L 41.246094 41.246094 C 41.643094 41.643094 42.299687 41.643469 42.679688 41.230469 C 46.604687 36.958469 49 31.259 49 25 C 49 18.741 46.604687 13.041531 42.679688 8.7695312 C 42.489688 8.5625312 42.229875 8.4586563 41.96875 8.4570312 z M 35.625 14.837891 C 35.355125 14.824516 35.079594 14.920406 34.871094 15.128906 L 32.740234 17.259766 C 32.381234 17.618766 32.341969 18.196938 32.667969 18.585938 C 34.123969 20.323937 35 22.561 35 25 C 35 27.439 34.123969 29.675109 32.667969 31.412109 C 32.341969 31.801109 32.381234 32.379281 32.740234 32.738281 L 34.871094 34.871094 C 35.288094 35.288094 35.967516 35.250687 36.353516 34.804688 C 38.625516 32.175687 40 28.748 40 25 C 40 21.252 38.625516 17.824312 36.353516 15.195312 C 36.160516 14.972313 35.894875 14.851266 35.625 14.837891 z M 14.375 14.839844 C 14.105125 14.853219 13.839484 14.974266 13.646484 15.197266 C 11.374484 17.825266 10 21.252 10 25 C 10 28.748 11.374484 32.175688 13.646484 34.804688 C 14.032484 35.250687 14.711906 35.288094 15.128906 34.871094 L 17.259766 32.740234 C 17.618766 32.381234 17.658031 31.803062 17.332031 31.414062 C 15.876031 29.676062 15 27.439 15 25 C 15 22.561 15.876031 20.324891 17.332031 18.587891 C 17.658031 18.198891 17.618766 17.620719 17.259766 17.261719 L 15.128906 15.128906 C 14.920406 14.920406 14.644875 14.826469 14.375 14.839844 z M 25 19 C 21.686 19 19 21.686 19 25 C 19 28.314 21.686 31 25 31 C 28.314 31 31 28.314 31 25 C 31 21.686 28.314 19 25 19 z" fill="white"></path>
+          </svg>
+      </h2>
+      <h3 id="clock" class="relative top-[142px] font-mono left-[22px] text-gray-500 bg-black w-[220px] h-[32px]">real time 00:00:00</h3>
+
+      <div x-data="combobox" class="flex w-full max-w-xs flex-col gap-1 ml-auto relative mb-auto top-24 right-36" x-on:keydown="handleKeydownOnOptions($event)" x-on:keydown.esc.window="isOpen = false, openedWithKeyboard = false">
+        <div class="relative">
+            <button type="button" class="inline-flex w-full items-center justify-between gap-2 border border-neutral-300 rounded-md bg-neutral-50 px-4 py-2 text-sm font-medium tracking-wide text-neutral-600 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-neutral-300 dark:focus-visible:outline-white" role="combobox" aria-controls="countriesList" aria-haspopup="listbox" x-on:click="isOpen = ! isOpen" x-on:keydown.down.prevent="openedWithKeyboard = true" x-on:keydown.enter.prevent="openedWithKeyboard = true" x-on:keydown.space.prevent="openedWithKeyboard = true" x-bind:aria-expanded="isOpen || openedWithKeyboard" x-bind:aria-label="selectedOption ? selectedOption.value : 'Select Airport'" >
+                <span class="text-sm font-normal" x-text="selectedOption ? selectedOption.airport_name : 'Select Airport'"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"class="size-5" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+                </svg>
+            </button>
+            <input id="country" name="country" autocomplete="off" x-ref="hiddenTextField" hidden=""/>
+            <div x-show="isOpen || openedWithKeyboard" id="countriesList" class="absolute left-0 top-11 z-10 w-full overflow-hidden rounded-md border border-neutral-300 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900" role="listbox" aria-label="countries list" x-on:click.outside="isOpen = false, openedWithKeyboard = false" x-on:keydown.down.prevent="$focus.wrap().next()" x-on:keydown.up.prevent="$focus.wrap().previous()" x-transition x-trap="openedWithKeyboard">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5" class="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-neutral-600/50 dark:text-neutral-300/50" aria-hidden="true" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+                    </svg>
+                    <input type="text" autocomplete="off" class="w-full border-b border-neutral-300 bg-neutral-50 py-2.5 pl-11 pr-4 text-sm text-neutral-600 focus:outline-none focus-visible:border-black disabled:cursor-not-allowed disabled:opacity-75 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:focus-visible:border-white" name="searchField" aria-label="Search" x-on:input="getFilteredOptions($el.value)" x-ref="searchField" placeholder="Search Airports" />
+                </div>
+                <ul class="flex max-h-44 flex-col overflow-y-auto">
+                    <li class="hidden px-4 py-2 text-sm text-neutral-600 dark:text-neutral-300" x-ref="noResultsMessage">
+                        <span>No matches found</span>
+                    </li>
+                    <template x-for="(item, index) in options" x-bind:key="item.value || item.id || index">
+                        <li class="combobox-option inline-flex cursor-pointer justify-between gap-6 bg-neutral-50 px-4 py-2 text-sm text-neutral-600 hover:bg-neutral-900/5 hover:text-neutral-900 focus-visible:bg-neutral-900/5 focus-visible:text-neutral-900 focus-visible:outline-none dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-50/5 dark:hover:text-white dark:focus-visible:bg-neutral-50/10 dark:focus-visible:text-white" role="option" x-on:click="setSelectedOption(item)" x-on:keydown.enter="setSelectedOption(item)" x-bind:id="'option-' + index" tabindex="0">
+                            <div class="flex items-center gap-2">
+                              <span x-bind:class="selectedOption == item ? 'font-bold' : null" x-text="item.airport_name"></span>
+                                <span class="sr-only" x-text="selectedOption == item ? 'selected' : null"></span>
+                            </div>
+                            <svg x-cloak x-show="selectedOption == item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" class="size-4" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5">
+                            </svg>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hs-select@latest/dist/hs-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script>
+      var colors = ["#000012", "#000012",];
+      gsap.set(".box", {
+          y: (i) => i * 110
+      });
+      gsap.to(".box", {
+          duration: 12,
+          ease: "none",
+          y: "-=1100",
+          modifiers: {
+              y: gsap.utils.unitize(y => (1100 + parseFloat(y)) % 1100)
+          },
+          repeat: -1
+      });
+
+      const overflow = document.querySelector("#overflow");
+
+      function applyOverflow() {
+          if (overflow.checked) {
+              gsap.set(".wrapper", { overflow: "visible" });
+          } else {
+              gsap.set(".wrapper", { overflow: "hidden" });
+          }
+      }
+    </script>
+    <script>
+      //!!!!!!! make time in live flights based on selected airport timezone !!!!!!!!!!!!
+      function updateClock(timeZone) {
+        const now = new Date();
+        const options = {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false,
+          timeZone: timeZone,
+        };
+      
+        const formattedTime = new Intl.DateTimeFormat('en-US', options).format(now);
+      
+        const clockElement = document.getElementById('clock');
+        clockElement.textContent = `real time ${formattedTime}`;
+      }
+    
+      setInterval(() => updateClock('America/New_York'), 1000);
+      updateClock('America/New_York');
+    </script>
+    <script src="./node_modules/flyonui/flyonui.js"></script>
+    <script src="node_modules/flyonui/dist/js/combobox.js"></script>
+  </body>
+</html>
