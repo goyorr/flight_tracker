@@ -1,5 +1,5 @@
-import json
 import airportsdata
+import json
 
 def enrich_airports_with_names(input_json, output_json):
     try:
@@ -26,6 +26,6 @@ def enrich_airports_with_names(input_json, output_json):
         print(f"Error occurred: {e}")
 
 if __name__ == "__main__":
-    input_json = "../data/airport_region_icao.json"
-    output_json = "../data/airport_city_icao.json"
+    input_json = "./data/airport_region_icao.json"
+    output_json = "./data/airport_city_icao.json"
     enrich_airports_with_names(input_json, output_json)

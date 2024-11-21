@@ -1,17 +1,16 @@
 {
-  "name": "flight_tracker",
+  "name": "frontend",
   "version": "1.0.0",
-  "main": "draw_arcs.js",
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "build": "npx tailwindcss -i ./static/style.css -o ./static/main.css",
+      "watch": "npx tailwindcss -i ./static/style.css -o ./static/main.css --watch",
+      "start": "npx http-server static"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "tailwindcss": "^3.0.0",
+    "postcss": "^8.0.0",
+    "autoprefixer": "^10.0.0",
+    "http-server": "^14.0.0"
+  },
+  "devDependencies": {}
 }

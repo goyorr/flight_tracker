@@ -1,5 +1,5 @@
-import csv
 import json
+import csv
 
 def parse_csv_and_dump_json(input_csv, output_json):
     try:
@@ -22,6 +22,6 @@ def parse_csv_and_dump_json(input_csv, output_json):
         print(f"Error occurred: {e}")
 
 if __name__ == "__main__":
-    input_csv = "../data/airports.csv"
-    output_json = "../data/airport_region_icao.json"
+    input_csv = "./data/airports.csv"
+    output_json = "./data/airport_region_icao.json"
     parse_csv_and_dump_json(input_csv, output_json)
