@@ -1,4 +1,5 @@
-backend/venv/
+frontend/static/output.css
 frontend/node_modules
-.env
+backend/venv/
 venv/
+.env

@@ -24,6 +24,7 @@ def get_enroute_flights(json_data):
         for flight in json_data.get(key, []):
             if "En Route" in flight.get("status", ""):
                 try:
+                    print(flight)
                     enroute_flights.append({
                         "origin_name": flight["origin"]["city"],
                         "destination_name": flight["destination"]["city"],
