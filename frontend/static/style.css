@@ -6,6 +6,14 @@
   display: none;
 }
 
+.unselectable {
+  user-select: none;
+}
+
+.destination {
+  color: rgb(109 40 217);
+}
+
 .log-contianer{
   position: relative;
   display: flex;

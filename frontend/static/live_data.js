@@ -10,7 +10,7 @@ function fetchAndDisplayFlights() {
     fetch('../../backend/data/live_feed.json')
       .then(response => response.json())
       .then(flights => {
-        const randomFlights = getRandomFlights(flights, 18);
+        const randomFlights = getRandomFlights(flights, 30);
         const flightListContainer = document.getElementById('flight-list');
     
         if (flightListContainer) {
@@ -53,15 +53,18 @@ function createFlightElement(flight) {
   
     const flightInfo = document.createElement('div');
     flightInfo.classList.add('flight-info', 'font-mono');
-    flightInfo.innerHTML = `${flight.origin} <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span> <span class="text-violet-700">${flight.destination}</span>`;
+    flightInfo.innerHTML = `<span class="unselectable">${flight.origin}
+                              <span class="text-gray-500 text-xl" style="font-size: 12px;">to</span>
+                              <span class="destination">${flight.destination}</span>
+                            </span>`;
   
     const flightInfo1 = document.createElement('div');
     flightInfo1.classList.add('flight-info1', 'text-gray-500', 'font-mono');
-    flightInfo1.innerHTML = `Out time: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>${formatTime(flight.scheduled_out)}`;
+    flightInfo1.innerHTML = `<span class="unselectable">Departed time: ${formatTime(flight.actual_out)}</span>`;
 
     const flightInfo2 = document.createElement('div');
     flightInfo2.classList.add('flight-info2', 'text-gray-500', 'font-mono');
-    flightInfo2.innerHTML = `Estimated off: ${formatTime(flight.estimated_off)}`;
+    flightInfo2.innerHTML = `<span class="unselectable">Arriving in: <span class="unselectable">&nbsp;&nbsp;</span>${formatTime(flight.estimated_in)}</span>`;
     flightElement.appendChild(flightInfo);
     flightElement.appendChild(flightInfo1);
     flightElement.appendChild(flightInfo2);
@@ -75,11 +78,11 @@ function animateBoxes() {
   });
 
   gsap.to(".box", {
-    duration: 12,
+    duration: 20,
     ease: "none",
-    y: "-=2000",
+    y: "-=3200",
     modifiers: {
-      y: gsap.utils.unitize(y => (1100 + parseFloat(y)) % 2000)
+      y: gsap.utils.unitize(y => (3200 + parseFloat(y)) % 3300)
     },
     repeat: -1
   });
