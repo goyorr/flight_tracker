@@ -40,7 +40,8 @@ def fetch_data():
                                 'estimated_in': flight.get('estimated_in', 'Unknown')
                             }
 
-                            parsed_data.append(parsed_flight)
+                            if all(value != 'Unknown' and value != None for value in parsed_flight.values()):
+                                parsed_data.append(parsed_flight)
             except():
                 print('Error fetching!')
             
