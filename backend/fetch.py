@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-api_key = os.getenv('flight_aware_api_key')
+api_key = os.getenv('FLIGHT_AWARE_API_KEY')
 headers = {'x-apikey': api_key}
 
 with open('./data/airport_city_icao.json', 'r') as file:

@@ -1,0 +1,722 @@
+[
+    {
+        "origin": "Seattle",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T22:19:00Z",
+        "estimated_off": "2024-11-22T00:31:40Z"
+    },
+    {
+        "origin": "Santiago",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T01:59:00Z",
+        "estimated_off": "2024-11-22T02:00:03Z"
+    },
+    {
+        "origin": "Detroit",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T02:35:00Z",
+        "estimated_off": "2024-11-22T03:38:21Z"
+    },
+    {
+        "origin": "San Salvador",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T00:45:00Z",
+        "estimated_off": "2024-11-22T01:07:12Z"
+    },
+    {
+        "origin": "Salt Lake City",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T00:25:00Z",
+        "estimated_off": "2024-11-22T00:56:15Z"
+    },
+    {
+        "origin": "Quito",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T22:15:00Z",
+        "estimated_off": "2024-11-21T23:27:25Z"
+    },
+    {
+        "origin": "Indianapolis",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T22:48:00Z",
+        "estimated_off": "2024-11-22T03:06:20Z"
+    },
+    {
+        "origin": "West Palm Beach",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T02:20:00Z",
+        "estimated_off": "2024-11-22T02:55:08Z"
+    },
+    {
+        "origin": "Minneapolis",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T01:59:00Z",
+        "estimated_off": "2024-11-22T02:28:04Z"
+    },
+    {
+        "origin": "Miami",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T02:24:00Z",
+        "estimated_off": "2024-11-22T02:44:07Z"
+    },
+    {
+        "origin": "San Francisco",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T21:22:00Z",
+        "estimated_off": "2024-11-21T23:40:54Z"
+    },
+    {
+        "origin": "San Diego",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T22:05:00Z",
+        "estimated_off": "2024-11-21T23:29:53Z"
+    },
+    {
+        "origin": "San Juan",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T01:25:00Z",
+        "estimated_off": "2024-11-22T01:34:30Z"
+    },
+    {
+        "origin": "Miami",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T01:45:00Z",
+        "estimated_off": "2024-11-22T02:37:42Z"
+    },
+    {
+        "origin": "San Diego",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T21:20:00Z",
+        "estimated_off": "2024-11-21T23:42:57Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Anchorage",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:11:09Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "London",
+        "scheduled_out": "2024-11-22T04:20:00Z",
+        "estimated_off": "2024-11-22T04:59:02Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Rochester",
+        "scheduled_out": "2024-11-22T02:59:00Z",
+        "estimated_off": "2024-11-22T04:57:37Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Syracuse",
+        "scheduled_out": "2024-11-22T03:30:00Z",
+        "estimated_off": "2024-11-22T04:56:26Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Toronto",
+        "scheduled_out": "2024-11-22T03:00:00Z",
+        "estimated_off": "2024-11-22T04:49:24Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Burlington",
+        "scheduled_out": "2024-11-22T03:51:00Z",
+        "estimated_off": "2024-11-22T04:48:04Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Punta Caucedo",
+        "scheduled_out": "2024-11-22T02:59:00Z",
+        "estimated_off": "2024-11-22T04:47:04Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Indianapolis",
+        "scheduled_out": "2024-11-22T03:47:00Z",
+        "estimated_off": "2024-11-22T04:45:48Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Kingston",
+        "scheduled_out": "2024-11-22T03:59:00Z",
+        "estimated_off": "2024-11-22T04:44:36Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "San Francisco",
+        "scheduled_out": "2024-11-22T00:40:00Z",
+        "estimated_off": "2024-11-22T04:42:43Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Santiago",
+        "scheduled_out": "2024-11-22T03:35:00Z",
+        "estimated_off": "2024-11-22T04:41:39Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Punta Caucedo",
+        "scheduled_out": "2024-11-22T03:59:00Z",
+        "estimated_off": "2024-11-22T04:38:46Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "London",
+        "scheduled_out": "2024-11-22T04:05:00Z",
+        "estimated_off": "2024-11-22T04:37:36Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Norfolk",
+        "scheduled_out": "2024-11-22T02:09:00Z",
+        "estimated_off": "2024-11-22T04:35:32Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Milan",
+        "scheduled_out": "2024-11-22T03:20:00Z",
+        "estimated_off": "2024-11-22T04:32:37Z"
+    },
+    {
+        "origin": "Los Angeles",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T00:00:00Z",
+        "estimated_off": "2024-11-22T00:21:19Z"
+    },
+    {
+        "origin": "Seattle",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T00:15:00Z",
+        "estimated_off": "2024-11-22T00:56:47Z"
+    },
+    {
+        "origin": "Las Vegas",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T23:35:00Z",
+        "estimated_off": "2024-11-22T00:52:15Z"
+    },
+    {
+        "origin": "Georgetown",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T23:49:00Z",
+        "estimated_off": "2024-11-21T23:51:00Z"
+    },
+    {
+        "origin": "Los Angeles",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T17:00:00Z",
+        "estimated_off": "2024-11-22T00:34:37Z"
+    },
+    {
+        "origin": "San Juan",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T21:20:00Z",
+        "estimated_off": "2024-11-22T02:01:27Z"
+    },
+    {
+        "origin": "San Francisco",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T00:19:00Z",
+        "estimated_off": "2024-11-22T00:44:37Z"
+    },
+    {
+        "origin": "San Francisco",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T21:55:00Z",
+        "estimated_off": "2024-11-22T01:02:33Z"
+    },
+    {
+        "origin": "San Salvador",
+        "destination": "New York",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T01:55:00Z"
+    },
+    {
+        "origin": "Fort Lauderdale",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T02:59:00Z",
+        "estimated_off": "2024-11-22T03:48:49Z"
+    },
+    {
+        "origin": "Guadalajara",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T01:11:00Z",
+        "estimated_off": "2024-11-22T01:20:05Z"
+    },
+    {
+        "origin": "Miami",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T23:10:00Z",
+        "estimated_off": "2024-11-22T03:47:39Z"
+    },
+    {
+        "origin": "Anchorage",
+        "destination": "New York",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-21T23:49:36Z"
+    },
+    {
+        "origin": "Jacksonville",
+        "destination": "New York",
+        "scheduled_out": "2024-11-22T01:05:00Z",
+        "estimated_off": "2024-11-22T04:40:40Z"
+    },
+    {
+        "origin": "Paris",
+        "destination": "New York",
+        "scheduled_out": "2024-11-21T19:30:00Z",
+        "estimated_off": "2024-11-21T22:52:19Z"
+    },
+    {
+        "origin": "New York",
+        "destination": null,
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:05:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Hebron",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:13:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Bogota",
+        "scheduled_out": "2024-11-22T04:35:00Z",
+        "estimated_off": "2024-11-22T05:14:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Quito",
+        "scheduled_out": "2024-11-22T05:05:00Z",
+        "estimated_off": "2024-11-22T05:15:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Warsaw",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:15:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Quito",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:15:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Taipei",
+        "scheduled_out": "2024-11-22T05:05:00Z",
+        "estimated_off": "2024-11-22T05:16:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Berlin",
+        "scheduled_out": "2024-11-22T04:55:00Z",
+        "estimated_off": "2024-11-22T05:16:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Paris",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:20:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Port of Spain",
+        "scheduled_out": "2024-11-22T05:10:00Z",
+        "estimated_off": "2024-11-22T05:20:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Istanbul",
+        "scheduled_out": "2024-11-22T05:10:00Z",
+        "estimated_off": "2024-11-22T05:20:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Boston",
+        "scheduled_out": "2024-11-22T03:29:00Z",
+        "estimated_off": "2024-11-22T05:20:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Taipei",
+        "scheduled_out": "2024-11-22T05:10:00Z",
+        "estimated_off": "2024-11-22T05:21:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Boston",
+        "scheduled_out": "2024-11-22T03:59:00Z",
+        "estimated_off": "2024-11-22T05:22:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Dubai",
+        "scheduled_out": "2024-11-22T04:00:00Z",
+        "estimated_off": "2024-11-22T05:25:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:29:00Z",
+        "estimated_off": "2024-11-22T03:27:00Z"
+    },
+    {
+        "origin": "Miami",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:26:00Z",
+        "estimated_off": "2024-11-22T03:46:35Z"
+    },
+    {
+        "origin": "Washington",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:25:00Z",
+        "estimated_off": "2024-11-22T03:57:00Z"
+    },
+    {
+        "origin": "Miami",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T02:26:00Z",
+        "estimated_off": "2024-11-22T03:42:17Z"
+    },
+    {
+        "origin": "Los Angeles",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:15:00Z",
+        "estimated_off": "2024-11-22T01:23:39Z"
+    },
+    {
+        "origin": "Denver",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T02:45:00Z",
+        "estimated_off": "2024-11-22T02:45:52Z"
+    },
+    {
+        "origin": "Boston",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:50:00Z",
+        "estimated_off": "2024-11-22T02:51:04Z"
+    },
+    {
+        "origin": "Paris",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-21T14:30:00Z",
+        "estimated_off": "2024-11-21T19:56:13Z"
+    },
+    {
+        "origin": "Tampa",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:44:00Z",
+        "estimated_off": "2024-11-22T03:51:02Z"
+    },
+    {
+        "origin": "St Louis",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-21T23:40:00Z",
+        "estimated_off": "2024-11-22T03:57:34Z"
+    },
+    {
+        "origin": "Houston",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:05:00Z",
+        "estimated_off": "2024-11-22T03:25:00Z"
+    },
+    {
+        "origin": "Seattle",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T00:24:00Z",
+        "estimated_off": "2024-11-22T00:53:45Z"
+    },
+    {
+        "origin": "St Louis",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:00:00Z",
+        "estimated_off": "2024-11-22T03:44:52Z"
+    },
+    {
+        "origin": "Chicago",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:40:00Z",
+        "estimated_off": "2024-11-22T03:30:24Z"
+    },
+    {
+        "origin": "San Francisco",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-21T21:55:00Z",
+        "estimated_off": "2024-11-22T00:48:14Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Fort Lauderdale",
+        "scheduled_out": "2024-11-22T03:40:00Z",
+        "estimated_off": "2024-11-22T05:13:39Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Chattanooga",
+        "scheduled_out": "2024-11-22T03:49:00Z",
+        "estimated_off": "2024-11-22T05:06:01Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Seoul (Incheon)",
+        "scheduled_out": "2024-11-22T04:45:00Z",
+        "estimated_off": "2024-11-22T05:03:15Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Philadelphia",
+        "scheduled_out": "2024-11-22T03:40:00Z",
+        "estimated_off": "2024-11-22T05:03:08Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Huntsville",
+        "scheduled_out": "2024-11-22T04:55:00Z",
+        "estimated_off": "2024-11-22T05:00:58Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Paris",
+        "scheduled_out": "2024-11-22T01:30:00Z",
+        "estimated_off": "2024-11-22T04:59:48Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Dallas-Fort Worth",
+        "scheduled_out": "2024-11-22T04:16:00Z",
+        "estimated_off": "2024-11-22T04:56:18Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "San Antonio",
+        "scheduled_out": "2024-11-22T04:19:00Z",
+        "estimated_off": "2024-11-22T04:53:14Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Baltimore",
+        "scheduled_out": "2024-11-22T04:32:00Z",
+        "estimated_off": "2024-11-22T04:47:17Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "San Antonio",
+        "scheduled_out": "2024-11-22T03:20:00Z",
+        "estimated_off": "2024-11-22T04:46:10Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Orlando",
+        "scheduled_out": "2024-11-22T03:15:00Z",
+        "estimated_off": "2024-11-22T04:44:58Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Indianapolis",
+        "scheduled_out": "2024-11-22T03:25:00Z",
+        "estimated_off": "2024-11-22T04:44:14Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Dallas",
+        "scheduled_out": "2024-11-22T01:45:00Z",
+        "estimated_off": "2024-11-22T04:43:15Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Louisville",
+        "scheduled_out": "2024-11-22T04:11:00Z",
+        "estimated_off": "2024-11-22T04:41:44Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Orlando",
+        "scheduled_out": "2024-11-22T04:15:00Z",
+        "estimated_off": "2024-11-22T04:40:50Z"
+    },
+    {
+        "origin": "Las Vegas",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:35:00Z",
+        "estimated_off": "2024-11-22T01:55:49Z"
+    },
+    {
+        "origin": "Dallas-Fort Worth",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T02:50:00Z",
+        "estimated_off": "2024-11-22T03:43:23Z"
+    },
+    {
+        "origin": "Houston",
+        "destination": "Atlanta",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T03:48:45Z"
+    },
+    {
+        "origin": "San Juan",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:55:00Z",
+        "estimated_off": "2024-11-22T02:05:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:00:00Z",
+        "estimated_off": "2024-11-22T03:45:24Z"
+    },
+    {
+        "origin": "Fort Lauderdale",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:57:00Z",
+        "estimated_off": "2024-11-22T04:05:27Z"
+    },
+    {
+        "origin": "Las Vegas",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:50:00Z",
+        "estimated_off": "2024-11-22T02:20:41Z"
+    },
+    {
+        "origin": "Miami",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:16:00Z",
+        "estimated_off": "2024-11-22T04:10:47Z"
+    },
+    {
+        "origin": "Phoenix",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T02:20:00Z",
+        "estimated_off": "2024-11-22T02:34:44Z"
+    },
+    {
+        "origin": "Baltimore",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T03:18:00Z",
+        "estimated_off": "2024-11-22T04:17:13Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T02:45:00Z",
+        "estimated_off": "2024-11-22T03:58:00Z"
+    },
+    {
+        "origin": "Louisville",
+        "destination": "Atlanta",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T04:50:00Z"
+    },
+    {
+        "origin": "New York",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:20:00Z",
+        "estimated_off": "2024-11-22T02:10:09Z"
+    },
+    {
+        "origin": "Newark",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T01:55:00Z",
+        "estimated_off": "2024-11-22T04:12:04Z"
+    },
+    {
+        "origin": "Philadelphia",
+        "destination": "Atlanta",
+        "scheduled_out": "2024-11-22T02:18:00Z",
+        "estimated_off": "2024-11-22T04:25:37Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Knoxville",
+        "scheduled_out": "2024-11-22T03:55:00Z",
+        "estimated_off": "2024-11-22T04:05:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Chicago",
+        "scheduled_out": "2024-11-22T04:25:00Z",
+        "estimated_off": "2024-11-22T04:43:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Los Angeles",
+        "scheduled_out": "2024-11-22T03:55:00Z",
+        "estimated_off": "2024-11-22T05:17:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Austin",
+        "scheduled_out": "2024-11-22T04:00:00Z",
+        "estimated_off": "2024-11-22T05:25:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Baltimore",
+        "scheduled_out": "2024-11-22T03:25:00Z",
+        "estimated_off": "2024-11-22T05:33:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Raleigh/Durham",
+        "scheduled_out": "2024-11-22T05:30:00Z",
+        "estimated_off": "2024-11-22T05:40:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Hebron",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T05:40:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Louisville",
+        "scheduled_out": "2024-11-22T06:47:00Z",
+        "estimated_off": "2024-11-22T07:00:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Chicago",
+        "scheduled_out": "2024-11-22T03:18:00Z",
+        "estimated_off": "2024-11-22T07:36:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Lisbon",
+        "scheduled_out": "2024-11-22T07:00:00Z",
+        "estimated_off": "2024-11-22T07:43:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Dallas-Fort Worth",
+        "scheduled_out": null,
+        "estimated_off": "2024-11-22T08:14:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Luxembourg",
+        "scheduled_out": "2024-11-22T08:45:00Z",
+        "estimated_off": "2024-11-22T08:55:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Charlotte",
+        "scheduled_out": "2024-11-22T10:00:00Z",
+        "estimated_off": "2024-11-22T10:19:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Boston",
+        "scheduled_out": "2024-11-22T10:20:00Z",
+        "estimated_off": "2024-11-22T10:30:00Z"
+    },
+    {
+        "origin": "Atlanta",
+        "destination": "Fort Lauderdale",
+        "scheduled_out": "2024-11-22T10:25:00Z",
+        "estimated_off": "2024-11-22T10:31:00Z"
+    }
+]
