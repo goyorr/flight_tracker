@@ -138,8 +138,8 @@
 }
 
 .wrapper {
-  width: 350px;
-  height: 100%;
+  width: 400px;
+  height: 250%;
   position: absolute;
   top: 190px;
   overflow: hidden;
