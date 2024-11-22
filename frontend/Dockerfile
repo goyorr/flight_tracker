@@ -1,7 +1,5 @@
 FROM node:16 AS build
 
-RUN apt update
-
 WORKDIR /app
 
 COPY package.json package-lock.json ./
@@ -12,9 +10,10 @@ COPY . .
 
 RUN npm run build
 
-# RUN apt install openssl
-
 FROM nginx:alpine
+
+RUN apk update \
+    && apk add openssl
 
 COPY --from=build /app/static/ /usr/share/nginx/html
 
@@ -22,8 +21,8 @@ COPY ./default.conf /etc/nginx/default.conf
 
 EXPOSE 443
 
-# RUN mkdir -p ./certs
+COPY start.sh /
 
-# RUN openssl req -newkey rsa:2048 -nodes -keyout ./certs/selfsigned.key -x509 -out ./certs/selfsigned.crt -days 365
+RUN chmod +x /start.sh 
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/start.sh"]
