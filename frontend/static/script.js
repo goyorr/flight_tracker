@@ -3,7 +3,7 @@ let cords = [];
 let globe; 
 
 function fetchAndUpdateData(airportCode) {
-  fetch('http://0.0.0.0:5000/api/fetch_and_update', {
+  fetch('http://localhost:8000/api/fetch_and_update', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ document.addEventListener('alpine:init', () => {
       },
 
       async fetchData() {
-          const response = await fetch(`http://0.0.0.0:5000/api/search_airports?query=${this.query}&page=${this.page}&per_page=${this.perPage}`);
+          const response = await fetch(`http://localhost:8000/api/search_airports?query=${this.query}&page=${this.page}&per_page=${this.perPage}`);
           const data = await response.json();
           this.options = data;
         },
